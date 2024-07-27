@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/SkillDisplay/static/css/main.330c0e6c.css",
+    "main.js": "/SkillDisplay/static/js/main.4fb804d4.js",
+    "index.html": "/SkillDisplay/index.html",
+    "main.330c0e6c.css.map": "/SkillDisplay/static/css/main.330c0e6c.css.map",
+    "main.4fb804d4.js.map": "/SkillDisplay/static/js/main.4fb804d4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.330c0e6c.css",
+    "static/js/main.4fb804d4.js"
+  ]
+}
