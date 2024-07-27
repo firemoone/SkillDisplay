@@ -11,6 +11,10 @@ export default function App() {
 	const [actionList, setActionList] = React.useState([])
 	const [encounterList, setEncounterList] = React.useState([])
 
+	const isCombatAction = (actionId) => {
+		return (actionId >= 9 && actionId <= 40000)
+	}
+
 	React.useEffect(() => {
 		let selfId
 		let lastTimestamp = ""
@@ -82,8 +86,8 @@ export default function App() {
 			const action = parseInt(logParameter3, 16)
 
 			if ( //sanity check the tea sis period wig snapped
-				((action < 9 || action > 30000) && //is not a combat action
-                (action < 100001 || action > 100300)) || //and is not a crafting action
+				(!isCombatAction(action) && //is not a combat action
+					(action < 100001 || action > 100300)) || // and is not sprint
 				(logTimestamp === lastTimestamp && action === lastAction) //or this action is a bug/duplicate
 			)
 				return
