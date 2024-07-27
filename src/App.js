@@ -87,7 +87,7 @@ export default function App() {
 
 			if ( //sanity check the tea sis period wig snapped
 				(!isCombatAction(action) && //is not a combat action
-					(action < 100001 || action > 100300)) || // and is not sprint
+					(action < 100001 || action > 100300)) || //and is not a crafting action
 				(logTimestamp === lastTimestamp && action === lastAction) //or this action is a bug/duplicate
 			)
 				return
